@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/inventario.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="imagenes/icons8-empresa-16.png">
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Inventario</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
+    <!-- Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.css">
+    <script src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.js"></script>
+
+    <!--font awesome-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Buttons -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+</head>
+
+<body>
+ 
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a href="inicioP.html" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Registro de proyectos</span> 1 </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Requerimientos</span> 2 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
+                        </li>
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">loser</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col py-3">
+                <section id="esta">
+                    <div class="table-responsive" id="mydatatable-container">
+                        <table class="records_list table table-striped table-bordered table-hover" id="mydatatable">
+
+                            <thead>
+
+                                <tr>
+                                    <td>Item/producto</td>
+                                    <td>cantidad</td>
+                                    <td>Estado</td>
+                                    <td>Proveedor</td>
+                                    <td>existencia</td>
+                                </tr>
+
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+
+                                </tr>
+                            </tfoot>
+                            <tbody>
+
+                                <tr>
+                                    <td>1.Cemento</td>
+                                    <td>3 (Tres) bultos</td>
+                                    <td>Bueno</td>
+                                    <td>Homecenter</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>2. Arena de rio</td>
+                                    <td>10 (Diez) bultos</td>
+                                    <td>Medio</td>
+                                    <td>Homecenter</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>3. Estuco (pasta)</td>
+                                    <td>4 (Cuatro) canecas</td>
+                                    <td>Nuevo</td>
+                                    <td>Homecenter</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>4. Yeso</td>
+                                    <td>10 (Diez) Kilos</td>
+                                    <td>Nuevo</td>
+                                    <td>Homecenter</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>5. Pintura</td>
+                                    <td>3 (Tres) canecas</td>
+                                    <td>Nuevo</td>
+                                    <td>Homecenter </td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>6. Lijas </td>
+                                    <td>8 (Ocho) lijas</td>
+                                    <td>Medio</td>
+                                    <td>Homecenter</td>
+                                    <td>5</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <section class="page-section bg-light" id="team">
+                            <div class="container">
+                                <div class="text-center">
+                                    <h2 class="section-heading text-uppercase">Project Manager</h2>
+                                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="team-member">
+                                            <img class="mx-auto rounded-circle" src="imagenes/controldeobra1.png" alt="..." />
+                                            <h4>Registro de planos
+                                            </h4>
+                                            <p class="text-muted">Todos los proyectos deben estar registrados y aprobados por un profesional en arquitectura o ingeniería.
+                                            </p>
+                                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="team-member">
+                                            <img class="mx-auto rounded-circle" src="imagenes/controldeobra2.png.jpg" alt="..." />
+                                            <h4>Revisar inventario</h4>
+                                            <p class="text-muted">Antes de solicitar materiales para el proyecto, revise las existencias del inventario para realizar los requerimientos</p>
+                                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="team-member">
+                                            <img class="mx-auto rounded-circle" src="imagenes/controldeobra3.jpg" alt="..." />
+                                            <h4> Requerimientos
+                                            </h4>
+                                    <p class="text-muted">Realice los requerimientos de insumos y materia prima, conforme al avance de la obra, para no generar exceso de inventario.
+                                    </p>
+                                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Clients-->
+                        
+                               
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#mydatatable tfoot th').each(function () {
+                var title = $(this).text();
+                $(this).html('');
+            });
+
+            var table = $('#mydatatable').DataTable({
+                "dom": 'B<"float-left"i><"float-right"f>t<"float-left"l><"float-right"p><"clearfix">',
+                "responsive": true,
+                "language": {
+                    /* DEFINE EL IDIOMA EN QUE SE MOSTRARÁ LA INFO Y MENSAJES DE BUSQUEDA*/
+                    "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
+                },
+                "order": [
+                    [0, "desc"]
+                ],
+                "initComplete": function () {
+                    this.api().columns().every(function () {
+                        var that = this;
+
+                        $('input', this.footer()).on('keyup change', function () {
+                            if (that.search() !== this.value) {
+                                that
+                                    .search(this.value)
+                                    .draw();
+                            }
+                        });
+                    })
+                },
+                /* SE DEFINE EL ARREGLO DE BOTONES QUE SE VAN A MOSTRAR - OCULTA EL BOTON DE COPIAR*/
+                "buttons": [
+                    {
+                        extend: 'csvHtml5',
+                        text: '<i class="fas fa-file-csv"></i>',
+                        titleAttr: 'Export a Csv',
+                        className: 'btn btn-danger'
+                    },
+                    {
+                        extend: 'excelHtml5',
+                        text: '<i class="fa-solid fa-file-excel"></i>',
+                        titleAttr: 'Export a Excel',
+                        className: 'btn btn-success'
+                    },
+
+                    {
+                        extend: 'pdfHtml5',
+                        text: '<i class="fa-solid fa-file-pdf"></i>',
+                        titleAttr: 'Export a .Pdf',
+                        className: 'btn btn-primary'
+                    },
+
+                    {
+                        extend: 'print',
+                        text: '<i class="fa fa-print" aria-hidden="true"></i>',
+                        titleAttr: 'Imprimir',
+                        className: 'btn btn-primary'
+                    },
+                    /* 'csv', 'excel', 'pdf', 'print' */
+                ]
+            });
+        });
+
+    </script>
+    <script>
+        function clickAlert() {
+            alert("Alert!");
+        }
+    </script>
+
+    
+
+</body>
+
+</html>

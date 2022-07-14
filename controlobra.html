@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fidelizacion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="CSS/inventario.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="CSS/inventario.css">
+    <title>Inventario</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
+    <!-- Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.css">
+    <script src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.js"></script>
+
+    <!--font awesome-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Buttons -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+
+
+</head>
+<body>
+    <header>
+        <h1 class="text-white fs-6">R&D.CONSTRUCTORA</h1>
+
+    </header>
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+          <div class=" aca col-auto col-md-3 col-xl-2 px-sm-2 px-0 ">
+              <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                  <a href="/"
+                      class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                      <span class="fs-5 text-danger d-none d-sm-inline">Menu</span>
+                  </a>
+                  <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                      id="menu">
+                      <li class="nav-item">
+                          <a href="index.html" class="nav-link align-middle px-0">
+                              <i class="fs-4 bi-house  text-white "></i> <span
+                                  class="  text-white ms-1 d-none d-sm-inline">Inicio</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                              <i class="fs-4 bi-speedometer2  text-white"></i> <span
+                                  class="  text-white ms-1 d-none d-sm-inline">Funciones</span> </a>
+                          <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                              <li class="w-100">
+                                  <a href="controlobra.html" class="nav-link px-0  text-white"> <span
+                                          class="d-none d-sm-inline">Resgistro proyectos</span> </a>
+                              </li>
+                              <li>
+                                  <a href="seguimiento.html" class="nav-link px-0  text-white"> <span
+                                          class="d-none d-sm-inline">Seguimiento</span> </a>
+                              </li>
+                              <li>
+                                  <a href="requerimiento.html" class="nav-link px-0  text-white"> <span
+                                          class="d-none d-sm-inline">Requerimientos</span></a>
+
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="#" class="nav-link px-0 align-middle">
+                              <i class="fs-4 bi-table  text-white"></i> <span
+                                  class="ms-1 d-none d-sm-inline  text-white">calendario</span></a>
+                      </li>
+                      <li>
+                          <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                              <i class="fs-4 bi-bootstrap  text-white"></i> <span
+                                  class="ms-1 d-none d-sm-inline  text-white">Bootstrap</span></a>
+                          <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                              <li class="w-100">
+                                  <a href="#" class="nav-link px-0  text-white"> <span
+                                          class="d-none d-sm-inline">Item</span> 1</a>
+                              </li>
+                              <li>
+                                  <a href="#" class="nav-link px-0  text-white"> <span
+                                          class="d-none d-sm-inline">Item</span> 2</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="#" class="nav-link px-0 align-middle  text-white">
+                              <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">informacion</span>
+                          </a>
+                      </li>
+                  </ul>
+                  <hr>
+
+              </div>
+          </div>
+          <div class="col py-3 ">
+              <div class="dropdown pb-4">
+                  <a href="#"
+                      class=" aja d-flex align-items-center text-black-50 text-decoration-none dropdown-toggle"
+                      id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="imagenes/constructor.png" alt="hugenerd" width="30" height="30"
+                          class="rounded-circle">
+                      <span class="d-none d-sm-inline mx-1">Gerente de proyecto</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                      <li><a class="dropdown-item" href="#">Ir al perfil</a></li>
+                      <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                      <li><a class="dropdown-item" href="#">Reportar problema</a></li>
+                      <li>
+                          <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="index.html">Salir</a></li>
+                  </ul>
+              </div>
+          
+               
+
+                <h2 class="text-black-50">CONTROL DE OBRA</h2>
+                <p class="text-black-50">Registre datos del proyecto</p>
+
+                <section id="esta">
+                  <div class="table-responsive" id="mydatatable-container">
+                      <table class="records_list table table-striped table-bordered table-hover" id="mydatatable">
+                  
+                          <thead>
+                  
+                              <tr>
+                                  <td>Codigo del proyecto</td>
+                                  <td>Nombre del proyecto</td>
+                                  <td>Costo del proyecto</td>
+                                  <td>Fecha de inicio</td>
+                                  <td>Fecha de finalizacion</td>
+                                  <td>Comentarios</td>
+                              </tr>
+                  
+                          </thead>
+                          <tfoot>
+                              <tr>
+                                  <th></th>
+                                  <th></th>
+                                  <th></th>
+                                  <th></th>
+                                  <th></th>
+                                  <th></th>
+                  
+                              </tr>
+                          </tfoot>
+                          <tbody>
+                  
+                              <tr>
+                                  <td>1.Cemento</td>
+                                  <td>3 (Tres) bultos</td>
+                                  <td>Bueno</td>
+                                  <td>Homecenter</td>
+                                  <td>5</td>
+                                  <td>5</td>
+                              </tr>
+                              <tr>
+                                  <td>2. Arena de rio</td>
+                                  <td>10 (Diez) bultos</td>
+                                  <td>Medio</td>
+                                  <td>Homecenter</td>
+                                  <td>50</td>
+                                  <td>5</td>
+                              </tr>
+                              <tr>
+                                  <td>3. Estuco (pasta)</td>
+                                  <td>4 (Cuatro) canecas</td>
+                                  <td>Nuevo</td>
+                                  <td>Homecenter</td>
+                                  <td>4</td>
+                                  <td>5</td>
+                              </tr>
+                              <tr>
+                                  <td>4. Yeso</td>
+                                  <td>10 (Diez) Kilos</td>
+                                  <td>Nuevo</td>
+                                  <td>Homecenter</td>
+                                  <td>6</td>
+                                  <td>5</td>
+                              </tr>
+                              <tr>
+                                  <td>5. Pintura</td>
+                                  <td>3 (Tres) canecas</td>
+                                  <td>Nuevo</td>
+                                  <td>Homecenter </td>
+                                  <td>5</td>
+                                  <td>5</td>
+                              </tr>
+                              <tr>
+                                  <td>6. Lijas </td>
+                                  <td>8 (Ocho) lijas</td>
+                                  <td>Medio</td>
+                                  <td>Homecenter</td>
+                                  <td>5</td>
+                                  <td>5</td>
+                              </tr>
+                  
+                          </tbody>
+                      </table>
+                  
+                      <h1>Servicios actuales</h1>
+                      <div class="row row-cols-1 row-cols-md-2 g-4">
+                        
+                        <div class="col">
+                          <div class="card">
+                            <img src="imagenes/fidelizacion1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                            <img src="imagenes/FIDELIZACION5.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                            <img src="imagenes/fidelizacion3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                            <img src="imagenes/fidelizacion2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+  
+                      
+                      <div class="col-12">
+                        <div class="card h-100">
+                          <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                            <div class="card-title mb-0">
+                              <h5 class="m-0 me-2">Servicios mas adquiridos</h5>
+                              <small class="text-muted">42.82k Total Ventas</small>
+                            </div>
+                            <div class="dropdown">
+                              <button class="btn p-0" type="button" id="orederStatistics" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-dots-vertical-rounded"></i>
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orederStatistics">
+                                <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-3" style="position: relative;">
+                              <div class="d-flex flex-column align-items-center gap-1">
+                                <h2 class="mb-2">8,258</h2>
+                                <span>Total Ordenes</span>
+                              </div>
+                              <div id="orderStatisticsChart" style="min-height: 137.55px;"><div id="apexcharts1o6k671zh" class="apexcharts-canvas apexcharts1o6k671zh apexcharts-theme-light" style="width: 130px; height: 137.55px;"><svg id="SvgjsSvg1703" width="130" height="137.55" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><g id="SvgjsG1705" class="apexcharts-inner apexcharts-graphical" transform="translate(-7, 0)"><defs id="SvgjsDefs1704"><clipPath id="gridRectMask1o6k671zh"><rect id="SvgjsRect1707" width="150" height="173" x="-4.5" y="-2.5" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath><clipPath id="forecastMask1o6k671zh"></clipPath><clipPath id="nonForecastMask1o6k671zh"></clipPath><clipPath id="gridRectMarkerMask1o6k671zh"><rect id="SvgjsRect1708" width="145" height="172" x="-2" y="-2" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath></defs><g id="SvgjsG1709" class="apexcharts-pie"><g id="SvgjsG1710" transform="translate(0, 0) scale(1)"><circle id="SvgjsCircle1711" r="44.835365853658544" cx="70.5" cy="70.5" fill="transparent"></circle><g id="SvgjsG1712" class="apexcharts-slices"><g id="SvgjsG1713" class="apexcharts-series apexcharts-pie-series" seriesName="Electronic" rel="1" data:realIndex="0"><path id="SvgjsPath1714" d="M 70.5 10.71951219512195 A 59.78048780487805 59.78048780487805 0 0 1 97.63977353321047 123.7648046533095 L 90.85483014990785 110.44860348998213 A 44.835365853658544 44.835365853658544 0 0 0 70.5 25.664634146341456 L 70.5 10.71951219512195 z" fill="rgba(105,108,255,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="5" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-0" index="0" j="0" data:angle="153" data:startAngle="0" data:strokeWidth="5" data:value="85" data:pathOrig="M 70.5 10.71951219512195 A 59.78048780487805 59.78048780487805 0 0 1 97.63977353321047 123.7648046533095 L 90.85483014990785 110.44860348998213 A 44.835365853658544 44.835365853658544 0 0 0 70.5 25.664634146341456 L 70.5 10.71951219512195 z" stroke="#ffffff"></path></g><g id="SvgjsG1715" class="apexcharts-series apexcharts-pie-series" seriesName="Sports" rel="2" data:realIndex="1"><path id="SvgjsPath1716" d="M 97.63977353321047 123.7648046533095 A 59.78048780487805 59.78048780487805 0 0 1 70.5 130.28048780487805 L 70.5 115.33536585365854 A 44.835365853658544 44.835365853658544 0 0 0 90.85483014990785 110.44860348998213 L 97.63977353321047 123.7648046533095 z" fill="rgba(133,146,163,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="5" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-1" index="0" j="1" data:angle="27" data:startAngle="153" data:strokeWidth="5" data:value="15" data:pathOrig="M 97.63977353321047 123.7648046533095 A 59.78048780487805 59.78048780487805 0 0 1 70.5 130.28048780487805 L 70.5 115.33536585365854 A 44.835365853658544 44.835365853658544 0 0 0 90.85483014990785 110.44860348998213 L 97.63977353321047 123.7648046533095 z" stroke="#ffffff"></path></g><g id="SvgjsG1717" class="apexcharts-series apexcharts-pie-series" seriesName="Decor" rel="3" data:realIndex="2"><path id="SvgjsPath1718" d="M 70.5 130.28048780487805 A 59.78048780487805 59.78048780487805 0 0 1 10.71951219512195 70.50000000000001 L 25.664634146341456 70.5 A 44.835365853658544 44.835365853658544 0 0 0 70.5 115.33536585365854 L 70.5 130.28048780487805 z" fill="rgba(3,195,236,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="5" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-2" index="0" j="2" data:angle="90" data:startAngle="180" data:strokeWidth="5" data:value="50" data:pathOrig="M 70.5 130.28048780487805 A 59.78048780487805 59.78048780487805 0 0 1 10.71951219512195 70.50000000000001 L 25.664634146341456 70.5 A 44.835365853658544 44.835365853658544 0 0 0 70.5 115.33536585365854 L 70.5 130.28048780487805 z" stroke="#ffffff"></path></g><g id="SvgjsG1719" class="apexcharts-series apexcharts-pie-series" seriesName="Fashion" rel="4" data:realIndex="3"><path id="SvgjsPath1720" d="M 10.71951219512195 70.50000000000001 A 59.78048780487805 59.78048780487805 0 0 1 70.48956633664653 10.719513105630845 L 70.4921747524849 25.664634829223125 A 44.835365853658544 44.835365853658544 0 0 0 25.664634146341456 70.5 L 10.71951219512195 70.50000000000001 z" fill="rgba(113,221,55,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="5" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-3" index="0" j="3" data:angle="90" data:startAngle="270" data:strokeWidth="5" data:value="50" data:pathOrig="M 10.71951219512195 70.50000000000001 A 59.78048780487805 59.78048780487805 0 0 1 70.48956633664653 10.719513105630845 L 70.4921747524849 25.664634829223125 A 44.835365853658544 44.835365853658544 0 0 0 25.664634146341456 70.5 L 10.71951219512195 70.50000000000001 z" stroke="#ffffff"></path></g></g></g><g id="SvgjsG1721" class="apexcharts-datalabels-group" transform="translate(0, 0) scale(1)"><text id="SvgjsText1722" font-family="Helvetica, Arial, sans-serif" x="70.5" y="90.5" text-anchor="middle" dominant-baseline="auto" font-size="0.8125rem" font-weight="400" fill="#a1acb8" class="apexcharts-text apexcharts-datalabel-label" style="font-family: Helvetica, Arial, sans-serif;">Weekly</text><text id="SvgjsText1723" font-family="Public Sans" x="70.5" y="71.5" text-anchor="middle" dominant-baseline="auto" font-size="1.5rem" font-weight="400" fill="#566a7f" class="apexcharts-text apexcharts-datalabel-value" style="font-family: &quot;Public Sans&quot;;">38%</text></g></g><line id="SvgjsLine1724" x1="0" y1="0" x2="141" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" stroke-linecap="butt" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine1725" x1="0" y1="0" x2="141" y2="0" stroke-dasharray="0" stroke-width="0" stroke-linecap="butt" class="apexcharts-ycrosshairs-hidden"></line></g><g id="SvgjsG1706" class="apexcharts-annotations"></g></svg><div class="apexcharts-legend"></div><div class="apexcharts-tooltip apexcharts-theme-dark"><div class="apexcharts-tooltip-series-group" style="order: 1;"><span class="apexcharts-tooltip-marker" style="background-color: rgb(105, 108, 255);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-y-label"></span><span class="apexcharts-tooltip-text-y-value"></span></div><div class="apexcharts-tooltip-goals-group"><span class="apexcharts-tooltip-text-goals-label"></span><span class="apexcharts-tooltip-text-goals-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group" style="order: 2;"><span class="apexcharts-tooltip-marker" style="background-color: rgb(133, 146, 163);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-y-label"></span><span class="apexcharts-tooltip-text-y-value"></span></div><div class="apexcharts-tooltip-goals-group"><span class="apexcharts-tooltip-text-goals-label"></span><span class="apexcharts-tooltip-text-goals-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group" style="order: 3;"><span class="apexcharts-tooltip-marker" style="background-color: rgb(3, 195, 236);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-y-label"></span><span class="apexcharts-tooltip-text-y-value"></span></div><div class="apexcharts-tooltip-goals-group"><span class="apexcharts-tooltip-text-goals-label"></span><span class="apexcharts-tooltip-text-goals-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group" style="order: 4;"><span class="apexcharts-tooltip-marker" style="background-color: rgb(113, 221, 55);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-y-label"></span><span class="apexcharts-tooltip-text-y-value"></span></div><div class="apexcharts-tooltip-goals-group"><span class="apexcharts-tooltip-text-goals-label"></span><span class="apexcharts-tooltip-text-goals-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div></div></div>
+                            <div class="resize-triggers"><div class="expand-trigger"><div style="width: 398px; height: 139px;"></div></div><div class="contract-trigger"></div></div></div>
+                            <ul class="p-0 m-0">
+                              <li class="d-flex mb-4 pb-1">
+                                <div class="avatar flex-shrink-0 me-3">
+                                  <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-mobile-alt"></i></span>
+                                </div>
+                                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                  <div class="me-2">
+                                    <h6 class="mb-0">Construcción de casas</h6>
+                                    <small class="text-muted">duplex, quinchos, refacciones, ampliaciones.</small>
+                                  </div>
+                                  <div class="user-progress">
+                                    <small class="fw-semibold">82.5k</small>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="d-flex mb-4 pb-1">
+                                <div class="avatar flex-shrink-0 me-3">
+                                  <span class="avatar-initial rounded bg-label-success"><i class="bx bx-closet"></i></span>
+                                </div>
+                                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                  <div class="me-2">
+                                    <h6 class="mb-0">Proyectos</h6>
+                                    <small class="text-muted">Alquiler</small>
+                                  </div>
+                                  <div class="user-progress">
+                                    <small class="fw-semibold">23.8k</small>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="d-flex mb-4 pb-1">
+                                <div class="avatar flex-shrink-0 me-3">
+                                  <span class="avatar-initial rounded bg-label-info"><i class="bx bx-home-alt"></i></span>
+                                </div>
+                                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                  <div class="me-2">
+                                    <h6 class="mb-0">Ampliaciones</h6>
+                                    <small class="text-muted">Ampliaciones</small>
+                                  </div>
+                                  <div class="user-progress">
+                                    <small class="fw-semibold">849k</small>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="d-flex">
+                                <div class="avatar flex-shrink-0 me-3">
+                                  <span class="avatar-initial rounded bg-label-secondary"><i class="bx bx-football"></i></span>
+                                </div>
+                                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                  <div class="me-2">
+                                    <h6 class="mb-0">Duplex</h6>
+                                    <small class="text-muted">Duplex</small>
+                                  </div>
+                                  <div class="user-progress">
+                                    <small class="fw-semibold">99</small>
+                                  </div>
+                                </div>
+                                
+                              </li>
+                              
+                            </ul>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12"><div class="alert alert-dark" role="alert">
+                        <h4 class="alert-dark">Tienes un comentario de Tifany Hernandez!</h4>
+                        <p>Si queremos prevenir seriamente la violencia familiar, no podemos permitirnos tales comportamientos. Tenemos que actuar antes y de manera más consistente. Y simplemente deberíamos prescindir del término “tragedia familiar”.</p>
+                        <hr>
+                        <ul><a href="Formulario fidelizacion2.html"  type="button" class="btn btn-outline-secondary" disabled></button>Responder</a></li>
+                        </ul>
+                      </div>
+                  </section>
+  
+  
+              </div>
+          </div>
+          
+      </div>
+  
+      
+      
+  
+      </footer>
+                  
+                  </div>
+                  </div>
+                  </div>
+                </div>
+                  
+                  
+                  
+                  
+                  
+                  </div>
+                  </div>
+                  
+
+                    
+                    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="main.js"></script>  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+  crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="main.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+      $('#mydatatable tfoot th').each(function () {
+          var title = $(this).text();
+          $(this).html('');
+      });
+  
+      var table = $('#mydatatable').DataTable({
+          "dom": 'B<"float-left"i><"float-right"f>t<"float-left"l><"float-right"p><"clearfix">',
+          "responsive": true,
+          "language": {
+              /* DEFINE EL IDIOMA EN QUE SE MOSTRARÁ LA INFO Y MENSAJES DE BUSQUEDA*/
+              "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
+          },
+          "order": [
+              [0, "desc"]
+          ],
+          "initComplete": function () {
+              this.api().columns().every(function () {
+                  var that = this;
+  
+                  $('input', this.footer()).on('keyup change', function () {
+                      if (that.search() !== this.value) {
+                          that
+                              .search(this.value)
+                              .draw();
+                      }
+                  });
+              })
+          },
+          /* SE DEFINE EL ARREGLO DE BOTONES QUE SE VAN A MOSTRAR - OCULTA EL BOTON DE COPIAR*/
+          "buttons": [
+              {
+                  extend: 'csvHtml5',
+                  text: '<i class="fas fa-file-csv"></i>',
+                  titleAttr: 'Export a Csv',
+                  className: 'btn btn-danger'
+              },
+              {
+                  extend: 'excelHtml5',
+                  text: '<i class="fa-solid fa-file-excel"></i>',
+                  titleAttr: 'Export a Excel',
+                  className: 'btn btn-success'
+              },
+  
+              {
+                  extend: 'pdfHtml5',
+                  text: '<i class="fa-solid fa-file-pdf"></i>',
+                  titleAttr: 'Export a .Pdf',
+                  className: 'btn btn-primary'
+              },
+  
+              {
+                  extend: 'print',
+                  text: '<i class="fa fa-print" aria-hidden="true"></i>',
+                  titleAttr: 'Imprimir',
+                  className: 'btn btn-primary'
+              },
+              /* 'csv', 'excel', 'pdf', 'print' */
+          ]
+      });
+  });
+  
+  </script>
+  <script>
+  function clickAlert() {
+      alert("Alert!");
+  }
+  </script>
+  
+  
+  
+  </body>
+  
+  </html>

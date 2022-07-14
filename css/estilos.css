@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   
+    background: linear-gradient(70deg, rgb(250, 249, 249), rgb(3, 3, 3));
+}
+header{
+    padding: 15px;
+    background-color: #02010A;
+    
+}
+.carousel-item{
+    height: 700px;
+
+}
+.carousel-inner{
+    padding: 30px 40px;
+    margin-bottom: 10%;
+    height: 500px;
+}
+.carousel-inner h5 p{
+    text-align: center;
+    justify-content: center;
+}
+
+.imagenCentral{
+  padding: 20px 20px;
+
+}
+.responsive{
+    margin-bottom: 2%;
+}
+footer{
+    padding: 15px;
+    background-color: #02010A;
+    
+}
+div.galeria {
+    border: 1px solid #ccc;
+    }
+    div.galeria:hover {
+    border: 1px solid #777;
+    }
+    div.galeria img {
+    width: 100%;
+    height: auto;
+    }
+    div.desc {
+    padding: 15px;
+    text-align: center;
+    }
+    * {
+    box-sizing: border-box;
+    }
+    .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+    }
+    @media only screen and (max-width: 700px) {
+    .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+    }
+    }
+    @media only screen and (max-width: 500px) {
+    .responsive {
+    width: 100%;
+    }
+    }
+    .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    .bg {
+
+        background-image: url(../imagenes/construccion-recurso-bbva-1920x1180.png);
+        background-position: center center;
+        background-repeat: no-repeat; }
+        .gg{
+            background-color: #151516eb;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    

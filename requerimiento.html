@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="CSS/inventario.css">
+    <title>Control Obra</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-white fs-6">R&D.CONSTRUCTORA</h1>
+
+    </header>
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class=" aca col-auto col-md-3 col-xl-2 px-sm-2 px-0 ">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 text-danger d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house  text-white "></i> <span
+                                    class="  text-white ms-1 d-none d-sm-inline">Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2  text-white"></i> <span
+                                    class="  text-white ms-1 d-none d-sm-inline">funciones</span> </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="controlobra.html" class="nav-link px-0  text-white"> <span
+                                            class="d-none d-sm-inline">Resgistro proyectos</span> </a>
+                                </li>
+                                <li>
+                                    <a href="seguimiento.html" class="nav-link px-0  text-white"> <span
+                                            class="d-none d-sm-inline">Seguimiento</span> </a>
+                                </li>
+                                <li>
+                                    <a href="requerimiento.html" class="nav-link px-0  text-white"> <span
+                                            class="d-none d-sm-inline">Requerimientos</span></a>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table  text-white"></i> <span
+                                    class="ms-1 d-none d-sm-inline  text-white">calendario</span></a>
+                        </li>
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                <i class="fs-4 bi-bootstrap  text-white"></i> <span
+                                    class="ms-1 d-none d-sm-inline  text-white">Bootstrap</span></a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0  text-white"> <span
+                                            class="d-none d-sm-inline">Item</span> 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0  text-white"> <span
+                                            class="d-none d-sm-inline">Item</span> 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle  text-white">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">informacion</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+
+                </div>
+            </div>
+            <div class="col py-3 ">
+                <div class="dropdown pb-4">
+                    <a href="#"
+                        class=" aja d-flex align-items-center text-black-50 text-decoration-none dropdown-toggle"
+                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="imagenes/constructor.png" alt="hugenerd" width="30" height="30"
+                            class="rounded-circle">
+                        <span class="d-none d-sm-inline mx-1">Gerente de proyecto</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                        <li><a class="dropdown-item" href="#">Ir al perfil</a></li>
+                        <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                        <li><a class="dropdown-item" href="#">Reportar problema</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="index.html">Salir</a></li>
+                    </ul>
+                </div>
+
+
+                <h2 class="text-black-50">REQUERIMIENTOS DEL PROYECTO</h2>
+                <p class="text-black-50">Registre datos del proyecto</p>
+
+                <section id="esta">
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <td>Item requerido</td>
+                                <td>Personal requerido</td>
+                                <td>Mano de obra requerido</td>
+                                <td>Material</td>
+                                <td>Cantidad de material</td>
+                                <td>Comentarios</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                                <td>.....</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+      </script>
+</body>
+
+</html>

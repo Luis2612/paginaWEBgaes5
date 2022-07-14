@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/inventario.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="imagenes/icons8-empresa-16.png">   
+    <title>facturas</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
+    <!-- Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.css">
+    <script src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.js"></script>
+
+    <!--font awesome-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Buttons -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+</head>
+
+<body>
+ 
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a href="inicioP.html" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Registro de proveedores</span></a>
+                        </li>
+                        <li>
+                            <a href="actualizarproveedor.html" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Actializar proveedores</span></a>
+                        </li>
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Facturas</span></a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="facturasppagar.html" class="nav-link px-0"> <span class="d-none d-sm-inline">facturas por realizar</span> </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">facturas por cobrar</span> </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">cotizaciones</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">realizadas</span> </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">por realizar</span> </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-peop"></i> <span class="ms-1 d-none d-sm-inline"></span> </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">loser</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col py-3">
+                <section id="esta">
+                    <h2 class="text-black-50 m-3">facturas por realizar</h2>
+                    <br>
+                    
+                    <div class="container">
+                        <div class="row clearfix">
+                          <div class="col-md-12">
+                            <table class="table table-bordered table-hover" id="tab_logic">
+                              <thead>
+                                <tr>
+                                  <th class="text-center"> # </th>
+                                  <th class="text-center"> Product </th>
+                                  <th class="text-center"> Qty </th>
+                                  <th class="text-center"> Price </th>
+                                  <th class="text-center"> Total </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr id='addr0'>
+                                  <td>1</td>
+                                  <td><input type="text" name='product[]'  placeholder='Enter Product Name' class="form-control"/></td>
+                                  <td><input type="number" name='qty[]' placeholder='Enter Qty' class="form-control qty" step="0" min="0"/></td>
+                                  <td><input type="number" name='price[]' placeholder='Enter Unit Price' class="form-control price" step="0.00" min="0"/></td>
+                                  <td><input type="number" name='total[]' placeholder='0.00' class="form-control total" readonly/></td>
+                                </tr>
+                                <tr id='addr1'></tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="row clearfix">
+                          <div class="col-md-12">
+                            <button id="add_row" class="btn btn-default pull-left">Add Row</button>
+                            <button id='delete_row' class="pull-right btn btn-default">Delete Row</button>
+                          </div>
+                        </div>
+                        <div class="row clearfix" style="margin-top:20px">
+                          <div class="pull-right col-md-4">
+                            <table class="table table-bordered table-hover" id="tab_logic_total">
+                              <tbody>
+                                <tr>
+                                  <th class="text-center">Sub Total</th>
+                                  <td class="text-center"><input type="number" name='sub_total' placeholder='0.00' class="form-control" id="sub_total" readonly/></td>
+                                </tr>
+                                <tr>
+                                  <th class="text-center">Tax</th>
+                                  <td class="text-center"><div class="input-group mb-2 mb-sm-0">
+                                      <input type="number" class="form-control" id="tax" placeholder="0">
+                                      <div class="input-group-addon">%</div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                  <th class="text-center">Tax Amount</th>
+                                  <td class="text-center"><input type="number" name='tax_amount' id="tax_amount" placeholder='0.00' class="form-control" readonly/></td>
+                                </tr>
+                                <tr>
+                                  <th class="text-center">Grand Total</th>
+                                  <td class="text-center"><input type="number" name='total_amount' id="total_amount" placeholder='0.00' class="form-control" readonly/></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+    
+
+            </div>
+        </div>
+    </div>
+   
+    <script>
+        $(document).ready(function(){
+    var i=1;
+    $("#add_row").click(function(){b=i-1;
+        $('#addr'+i).html($('#addr'+b).html()).find('td:first-child').html(i+1);
+        $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+        i++; 
+    });
+    $("#delete_row").click(function(){
+        if(i>1){
+        $("#addr"+(i-1)).html('');
+        i--;
+        }
+        calc();
+    });
+    
+    $('#tab_logic tbody').on('keyup change',function(){
+        calc();
+    });
+    $('#tax').on('keyup change',function(){
+        calc_total();
+    });
+    
+
+});
+
+function calc()
+{
+    $('#tab_logic tbody tr').each(function(i, element) {
+        var html = $(this).html();
+        if(html!='')
+        {
+            var qty = $(this).find('.qty').val();
+            var price = $(this).find('.price').val();
+            $(this).find('.total').val(qty*price);
+            
+            calc_total();
+        }
+    });
+}
+
+function calc_total()
+{
+    total=0;
+    $('.total').each(function() {
+        total += parseInt($(this).val());
+    });
+    $('#sub_total').val(total.toFixed(2));
+    tax_sum=total/100*$('#tax').val();
+    $('#tax_amount').val(tax_sum.toFixed(2));
+    $('#total_amount').val((tax_sum+total).toFixed(2));
+}
+    </script>
+
+</body>
+
+</html>

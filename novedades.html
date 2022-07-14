@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="CSS/inventario.css">
+    <title>Novedades</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
+    <!-- Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.css">
+    <script src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.js"></script>
+
+    <!--font awesome-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Buttons -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.53/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+</head>
+
+<body>
+ 
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a href="inicioP.html" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Inicio</span>
+                            </a>
+                        </li>                                 
+                        <li> <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle"> 
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Funciones</span> </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="novedades.html" class="nav-link px-0"> <span class="d-none d-sm-inline">Horas extras trabajadas </span> </a>
+                                </li>
+                                <li>
+                                    <a href="novedades1.html" class="nav-link px-0"> <span class="d-none d-sm-inline">Sanciones </span> </a>
+                                </li>
+                                <li>
+                                    <a href="novedades2.html" class="nav-link px-0"> <span class="d-none d-sm-inline">Permisos</span> </a>
+                                </li>  
+                                <li>
+                                    <a href="novedades3.html" class="nav-link px-0"> <span class="d-none d-sm-inline">Turnos</span> </a>
+                                </li>
+                                <li>
+                                    <a href="novedades4.html" class="nav-link px-0"> <span class="d-none d-sm-inline">Renuncias</span> </a>
+                                </li>
+                                <li>
+                                    <a href="novedades5.html" class="nav-link px-0"> <span class="d-none d-sm-inline">Horas de ingreso y salida</span> </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Calendario</span></a>
+                        </li> 
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Productos</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Roles</span> </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">Nombre trabajador </a> <span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">Nuevo proyecto...</a></li>
+                            <li><a class="dropdown-item" href="#">Ajustes</a></li>
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Salir... </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col py-3">
+                <section id="esta">
+                    <div class="table-responsive" id="mydatatable-container">
+                        <table class="records_list table table-striped table-bordered table-hover" id="mydatatable">
+                        <h1> Horas extras trabajadas</h1> 
+                        <h2> <p style="color:rgb(117, 112, 112);">(Nombre trabajador)</p> </h2>
+                        <form class="row g-3 needs-validation" novalidate> 
+                        <div class="col-md-0">
+                            <label for="validationCustom03" class="form-label">Nombre trabajador</label>
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                              Please provide a valid city.
+                            </div>  
+                            <div class="col-md-0">
+                                <label for="validationCustom03" class="form-label">Total de horas trabajadas</label>
+                                <input type="text" class="form-control" id="validationCustom03" required>
+                                <div class="invalid-feedback">
+                                  Please provide a valid city.
+                                </div>  
+                                <div class="col-md-0">
+                                    <label for="validationCustom03" class="form-label">Costo de cada hora </label>
+                                    <input type="text" class="form-control" id="validationCustom03" required>
+                                    <div class="invalid-feedback">
+                                      Please provide a valid city.
+                                    </div>  
+                                    <div class="col-md-0">
+                                        <label for="validationCustom03" class="form-label">Total a entregar</label>
+                                        <input type="text" class="form-control" id="validationCustom03" required>
+                                        <div class="invalid-feedback">
+                                          Please provide a valid city.
+                                        </div>  
+                                        <br>
+                            <div class="col-12">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                  <label class="form-check-label" for="invalidCheck">
+                                    Aceptar terminos y condiciones
+                                  </label>
+                                  <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                  </div>
+                                  <br>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <button class="btn btn-primary" type="submit">Registar</button>
+                              </div>
+                              <br>
+                            </form>        
+                        <thead>
+
+                            <tr>
+                                <td>Nombres trabajadores </td>
+                                <td>N° Identificacion</td>
+                                <td>Cargo</td>
+                                <td>Total de horas laboradas</td>
+                                <td>Costo de cada hora </td> 
+                                <td>Total a entregar</td>
+                            </tr>
+
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+
+                            </tr>
+                        </tfoot>
+                        <tbody>
+
+                            <tr>
+                                <td>Maria Sofia Rojas</td>
+                                <td>35481547</td> 
+                                <td>Ingeniero</td>
+                                <td>6 horas</td> 
+                                <td>5 mil</td>
+                                <td>30 mil</td>
+                            </tr>
+                            <tr>
+                                <td>Sara Camargo Cerpa</td>
+                                <td>648293454</td>
+                                <td>Secretaria</td>
+                                <td>3 horas</td> 
+                                <td>5 mil</td>
+                                <td>15 mil</td>
+                            </tr>
+                            <tr>
+                                <td>Liliana Sanchez Cardoso</td>
+                                <td>46394538</td>
+                                <td>Trabajador obra</td>
+                                <td>4 horas</td> 
+                                <td>5 mil</td>
+                                <td>20 mil</td>
+                            </tr>
+                            <tr>
+                                <td>Cristian Francisco Cerpa</td>
+                                <td>37492648</td>
+                                <td>Ayudante obra</td>
+                                <td>3 horas</td> 
+                                <td>5 mil</td>
+                                <td>15 mil</td>
+                            </tr>
+                            <tr>
+                                <td>Sofia Camargo Cogollo</td>
+                                <td>3648364</td>
+                                <td>Ingeniero</td>
+                                <td>4 horas</td> 
+                                <td>5 mil</td>
+                                <td>20 mil</td>
+                            </tr>
+                            <tr>
+                                <td>Adriana Maria Gomez</td>
+                                <td>23145628</td> 
+                                <td>Secretaria</td>
+                                <td>5 horas</td> 
+                                <td>5 mil</td>
+                                <td>25 mil</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+            </section>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script src="main.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#mydatatable tfoot th').each(function () {
+            var title = $(this).text();
+            $(this).html('');
+        });
+
+        var table = $('#mydatatable').DataTable({
+            "dom": 'B<"float-left"i><"float-right"f>t<"float-left"l><"float-right"p><"clearfix">',
+            "responsive": true,
+            "language": {
+                /* DEFINE EL IDIOMA EN QUE SE MOSTRARÁ LA INFO Y MENSAJES DE BUSQUEDA*/
+                "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
+            },
+            "order": [
+                [0, "desc"]
+            ],
+            "initComplete": function () {
+                this.api().columns().every(function () {
+                    var that = this;
+
+                    $('input', this.footer()).on('keyup change', function () {
+                        if (that.search() !== this.value) {
+                            that
+                                .search(this.value)
+                                .draw();
+                        }
+                    });
+                })
+            },
+            /* SE DEFINE EL ARREGLO DE BOTONES QUE SE VAN A MOSTRAR - OCULTA EL BOTON DE COPIAR*/
+            "buttons": [
+                {
+                    extend: 'csvHtml5',
+                    text: '<i class="fas fa-file-csv"></i>',
+                    titleAttr: 'Export a Csv',
+                    className: 'btn btn-danger'
+                },
+                {
+                    extend: 'excelHtml5',
+                    text: '<i class="fa-solid fa-file-excel"></i>',
+                    titleAttr: 'Export a Excel',
+                    className: 'btn btn-success'
+                },
+
+                {
+                    extend: 'pdfHtml5',
+                    text: '<i class="fa-solid fa-file-pdf"></i>',
+                    titleAttr: 'Export a .Pdf',
+                    className: 'btn btn-primary'
+                },
+
+                {
+                    extend: 'print',
+                    text: '<i class="fa fa-print" aria-hidden="true"></i>',
+                    titleAttr: 'Imprimir',
+                    className: 'btn btn-primary'
+                },
+                /* 'csv', 'excel', 'pdf', 'print' */
+            ]
+        });
+    });
+
+</script>
+<script>
+    function clickAlert() {
+        alert("Alert!");
+    }
+</script>
+
+
+
+</body>
+
+</html>

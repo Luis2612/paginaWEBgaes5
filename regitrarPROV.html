@@ -7,8 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="CSS/inventario.css">
-    <title>Inventario</title>
+    <title>Registrar Proveedor</title>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- Required meta tags -->
@@ -44,79 +47,46 @@
 </head>
 
 <body>
-
+ 
 
     <div class="container-fluid">
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a href="/"
-                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <span class="fs-5 d-none d-sm-inline">Menu</span>
                     </a>
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-                        id="menu">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                         <li class="nav-item">
-                            <a href="inventario.html" class="nav-link align-middle px-0">
-                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Inicio</span>
+                            <a href="index.html" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-white-50">Inicio</span>
                             </a>
                         </li>
                         <li>
                             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"></i> <span
-                                    class="ms-1 d-none d-sm-inline">FUNCIONES</span> </a>
+                              <i class="fa-solid fa-angles-down"></i> <span class="ms-1 d-none d-sm-inline text-white-50">FUNCIONES</span> </a>
                             <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                                 <li class="w-100">
-                                    <a href="infoinventario.html" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline">informacion Inventario</span></a>
+                                    <a href="infoinventario.html" class="nav-link px-0"> <span class="d-none d-sm-inline text-white-50">registro de proveedores</span></a>
                                 </li>
                                 <li class="w-100">
-                                    <a href="ubicaioninve.html" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline">Ubicaion Item/producto</span></a>
+                                    <a href="ubicaioninve.html" class="nav-link px-0"> <span class="d-none d-sm-inline text-white-50">desempeño de proveedores</span></a>
                                 </li>
                                 <li>
-                                    <a href="registroinven.html" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline">Registro inventario</span> </a>
+                                    <a href="registroinven.html" class="nav-link px-0"> <span class="d-none d-sm-inline text-white-50">actualizar proveedores</span>  </a>
                                 </li>
-                                <li class="w-100">
-                                    <a href="registroubi.html" class="nav-link px-0"> <span class="d-none d-sm-inline">
-                                            Registro ubicaion </span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
-                        </li>
-                        <li>
-                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                <i class="fs-4 bi-bootstrap"></i> <span
-                                    class="ms-1 d-none d-sm-inline">Bootstrap</span></a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span>
-                                        1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span>
-                                        2</a>
-                                </li>
-                            </ul>
-                        </li>
 
-                        <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span>
-                            </a>
-                        </li>
+                                <li class="w-100">
+                                    <a href="registroubi.html" class="nav-link px-0"> <span class="d-none d-sm-inline text-white-50">registrar proveedores</span></a>
+                                </li>
+                            </ul>
+                        
                     </ul>
                     <hr>
                     <div class="dropdown pb-4">
-                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30"
-                                class="rounded-circle">
-                            <span class="d-none d-sm-inline mx-1">Bodeguero</span>
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">Secretaria</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                             <li><a class="dropdown-item" href="#">perfil</a></li>
@@ -132,95 +102,46 @@
             </div>
             <div class="col py-3">
                 <section id="esta">
-                    <h2>INFORMACION INVENTARIO</h2>
-                    <hr>
-                    <div class="table-responsive" id="mydatatable-container">
-                        <table class="records_list table table-striped table-bordered table-hover" id="mydatatable">
+                <h2>Registrar Proveedor</h2> <br>
+                  <div class="">
+                    <form>
+                     <div class="form-group">
+                      <p>
+                        <label>Entre su Nombre:</label> <br>
+                        <input id="nombre" class="form-control" type="text" placeholder="Nombre..."><br>
+                        
+                      </p>
+                      <p>
+                        <label>Entre su Apellido:</label> <br>
+                        <input id="apellido" class="form-control" type="text" placeholder="Apellido..."><br>
+                      </p>
+                      <p>
+                        <label>Entre su C&eacute;dula:</label> <br>
+                        <input id="cedula" class="form-control" type="text" placeholder="Cedúla"> <br>
+                      </p>
+                      <button id="adicionar" class="btn btn-dark" type="button">Adicionar a la tabla</button>
+                    </div>
+                  </form>
+                  
+                  <p>Elementos en la Tabla:
+                    <div id="adicionados"></div>
+                  </p>
+                  <table  id="mytable" class="table table-bordered table-hover ">
+                    <tr>
+                      <th>Nobmre</th>
+                      <th>Apellidos</th>
+                      <th>C&eacute;dula</th>
+                      <th>Eliminar</th>
+                  
+                    </tr>
+                  </table>
+                  </div>
 
-                            <thead>
-
-                                <tr>
-                                    <td>Item/producto</td>
-                                    <td>cantidad</td>
-                                    <td>Estado</td>
-                                    <td>Proveedor</td>
-                                    <td>existencia</td>
-                                </tr>
-
-                            </thead>
-                            <tfoot>
-                                <tr>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-
-                                </tr>
-                            </tfoot>
-                            <tbody>
-
-                                <tr>
-                                    <td>1.Cemento</td>
-                                    <td>3 (Tres) bultos</td>
-                                    <td>Bueno</td>
-                                    <td>Homecenter</td>
-                                    <td>5</td>
-                                </tr>
-                                <tr>
-                                    <td>2. Arena de rio</td>
-                                    <td>10 (Diez) bultos</td>
-                                    <td>Medio</td>
-                                    <td>Homecenter</td>
-                                    <td>50</td>
-                                </tr>
-                                <tr>
-                                    <td>3. Estuco (pasta)</td>
-                                    <td>4 (Cuatro) canecas</td>
-                                    <td>Nuevo</td>
-                                    <td>Homecenter</td>
-                                    <td>4</td>
-                                </tr>
-                                <tr>
-                                    <td>4. Yeso</td>
-                                    <td>10 (Diez) Kilos</td>
-                                    <td>Nuevo</td>
-                                    <td>Homecenter</td>
-                                    <td>6</td>
-                                </tr>
-                                <tr>
-                                    <td>5. Pintura</td>
-                                    <td>3 (Tres) canecas</td>
-                                    <td>Nuevo</td>
-                                    <td>Homecenter </td>
-                                    <td>5</td>
-                                </tr>
-                                <tr>
-                                    <td>6. Lijas </td>
-                                    <td>8 (Ocho) lijas</td>
-                                    <td>Medio</td>
-                                    <td>Homecenter</td>
-                                    <td>5</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-
-                </section>
 
             </div>
         </div>
     </div>
-
-
-
-
-
-
-    </div>
-    </div>
-    </div>
-
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
@@ -296,7 +217,40 @@
         }
     </script>
 
+    <script>
+       $(document).ready(function() {
+//obtenemos el valor de los input
 
+$('#adicionar').click(function() {
+  var nombre = document.getElementById("nombre").value;
+  var apellido = document.getElementById("apellido").value;
+  var cedula = document.getElementById("cedula").value;
+  var i = 1; //contador para asignar id al boton que borrara la fila
+  var fila = '<tr id="row' + i + '"><td>' + nombre + '</td><td>' + apellido + '</td><td>' + cedula + '</td><td><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove">Quitar</button></td></tr>'; //esto seria lo que contendria la fila
+
+  i++;
+
+  $('#mytable tr:first').after(fila);
+    $("#adicionados").text(""); //esta instruccion limpia el div adicioandos para que no se vayan acumulando
+    var nFilas = $("#mytable tr").length;
+    $("#adicionados").append(nFilas - 1);
+    //le resto 1 para no contar la fila del header
+    document.getElementById("apellido").value ="";
+    document.getElementById("cedula").value = "";
+    document.getElementById("nombre").value = "";
+    document.getElementById("nombre").focus();
+  });
+$(document).on('click', '.btn_remove', function() {
+  var button_id = $(this).attr("id");
+    //cuando da click obtenemos el id del boton
+    $('#row' + button_id + '').remove(); //borra la fila
+    //limpia el para que vuelva a contar las filas de la tabla
+    $("#adicionados").text("");
+    var nFilas = $("#mytable tr").length;
+    $("#adicionados").append(nFilas - 1);
+  });
+});
+    </script>
 
 </body>
 
